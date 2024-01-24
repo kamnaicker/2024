@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.jetbrains-mono-jetBrainsMono {
+                   font-family: "JetBrains Mono", monospace;
+                   font-optical-sizing: auto;
+                   font-weight: 250;
+                   font-style: normal;
+                 }
