@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/output.css' />
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+  <body class="m-0 p-0">
+    <div id="main" class="w-screen h-screen flex flex-col justify-center items-center from-[#F18805] to-[#DE7254] bg-gradient-to-t">
+      <div id="LoginContainer" class="flex flex-row items-center relative bg-[#273154] w-[570px] h-[504px] drop-shadow-Login hover:drop-shadow-LoginH rounded-2xl">
+          <div id="LContainer" class="w-[10%] shrink grow">
+          </div>
+          <div id="Login" class="flex flex-col items-center self-start w-[80%] shrink grow">
+              <h1 class="flex jetbrains-mono-jetBrainsMono text-white justify-center items-center text-[24px] tracking-[3px] mt-10 w-1/2 h-[10%]">LOGIN</h1>
+              <div class="mt-16">
+              <label class="jetbrains-mono-jetBrainsMono pl-2 tracking-[3px] text-white">
+                  Username
+              </label>
+              <input id="UsernameInput" type="text" class="relative flex w-[354px] h-[41px] rounded-2xl drop-shadow-2xl p-3 pl-5 jetbrains-mono-jetBrainsMono mt-2 shadow-inputInner ">
+              </div>
+            <div class="mt-10">
+              <label class="jetbrains-mono-jetBrainsMono pl-2 tracking-[3px] text-white">
+                  Password
+              </label>
+               <button class="text-[#F18805] float-right mt-1.5 mr-1.5 text-[10px] hover:text-white hover:pointer-events-auto tracking-wide">Forgot Details</button>
+              <input id="PasswordInput" type="password" class="relative flex w-[354px] h-[41px] rounded-2xl drop-shadow-2xl p-3 pl-5 jetbrains-mono-jetBrainsMono mt-2 shadow-inputInner ">
+            </div>
+              <div class="mt-5">
+                  <p3 class="jetbrains-mono-jetBrainsMono text-white">Already Have Your Ticket Code?</p3>
+              </div>
+              <div>
+                  <input id="TicketCode" type="password" class="relative flex w-[7rem] h-[2rem] rounded-md drop-shadow-2xl p-3 pl-5 jetbrains-mono-jetBrainsMono mt-2 shadow-inputInner ">
+              </div>
+              <div class="mt-5 tracking-wide">
+                  <i class="text-white text-[10px]">Don't Have An Account?</i>
+                  <button class="text-[#F18805] text-[10px] hover:text-white">Sign Up</button>
+              </div>
+        </div>
+          <div id="RContainer" class="shrink grow w-[10%] h-[100%] relative">
+              <div id="SelectionSlider" class="absolute w-[70px] h-1/5 rounded-2xl right-2 top-[82px] z-0 bg-white opacity-10"></div>
+              <div id="ExternalLogin" class="flex flex-col gap-y-10 text-[#F18805] text-[30px] z-10 h-[100%] justify-center">
+                  <ion-icon data-slide="0" name="logo-google" class="h-20"></ion-icon>
+                  <ion-icon data-slide="118" name="logo-facebook" class="h-20"></ion-icon>
+                  <ion-icon data-slide="236" name="logo-microsoft" class="h-20"></ion-icon>
+              </div>
+          </div>
+      </div>
+    </div>
+    <!--Import Scripts for Ionic Icons Here!-->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!--Sliding Function!-->
+    <script>
+        $(document).ready(function() {
+            $('#ExternalLogin ion-icon').on('mouseenter', function() {
+                var slideValue = $(this).data('slide') + 'px';
+                $('#SelectionSlider').css('transform', 'translateY(' + slideValue + ')');
+            });
+        });
+    </script>
+  </body>
+</html>

@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+
 /*
 ! tailwindcss v3.4.1 | MIT License | https://tailwindcss.com
 */
@@ -546,24 +548,60 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.absolute{
+  position: absolute;
+}
+
 .relative{
   position: relative;
+}
+
+.right-2{
+  right: 0.5rem;
+}
+
+.top-\[82px\]{
+  top: 82px;
+}
+
+.z-0{
+  z-index: 0;
+}
+
+.z-10{
+  z-index: 10;
+}
+
+.float-right{
+  float: right;
 }
 
 .m-0{
   margin: 0px;
 }
 
-.mt-0{
-  margin-top: 0px;
+.mr-1{
+  margin-right: 0.25rem;
 }
 
-.mt-0\.5{
-  margin-top: 0.125rem;
+.mr-1\.5{
+  margin-right: 0.375rem;
 }
 
-.mt-20{
-  margin-top: 5rem;
+.mt-1{
+  margin-top: 0.25rem;
+}
+
+.mt-1\.5{
+  margin-top: 0.375rem;
+}
+
+.mt-10{
+  margin-top: 2.5rem;
+}
+
+.mt-16{
+  margin-top: 4rem;
 }
 
 .mt-2{
@@ -574,32 +612,28 @@ video {
   margin-top: 1.25rem;
 }
 
-.-mt-16{
-  margin-top: -4rem;
-}
-
-.mt-16{
-  margin-top: 4rem;
-}
-
-.mt-14{
-  margin-top: 3.5rem;
-}
-
-.mt-12{
-  margin-top: 3rem;
-}
-
-.mt-10{
-  margin-top: 2.5rem;
-}
-
 .flex{
   display: flex;
 }
 
+.h-1\/5{
+  height: 20%;
+}
+
+.h-20{
+  height: 5rem;
+}
+
 .h-\[10\%\]{
   height: 10%;
+}
+
+.h-\[100\%\]{
+  height: 100%;
+}
+
+.h-\[2rem\]{
+  height: 2rem;
 }
 
 .h-\[41px\]{
@@ -618,6 +652,10 @@ video {
   width: 50%;
 }
 
+.w-\[10\%\]{
+  width: 10%;
+}
+
 .w-\[354px\]{
   width: 354px;
 }
@@ -626,8 +664,36 @@ video {
   width: 570px;
 }
 
+.w-\[70px\]{
+  width: 70px;
+}
+
+.w-\[7rem\]{
+  width: 7rem;
+}
+
+.w-\[80\%\]{
+  width: 80%;
+}
+
 .w-screen{
   width: 100vw;
+}
+
+.shrink{
+  flex-shrink: 1;
+}
+
+.grow{
+  flex-grow: 1;
+}
+
+.transform{
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.flex-row{
+  flex-direction: row;
 }
 
 .flex-col{
@@ -642,13 +708,30 @@ video {
   justify-content: center;
 }
 
+.gap-y-10{
+  row-gap: 2.5rem;
+}
+
+.self-start{
+  align-self: flex-start;
+}
+
 .rounded-2xl{
   border-radius: 1rem;
+}
+
+.rounded-md{
+  border-radius: 0.375rem;
 }
 
 .bg-\[\#273154\]{
   --tw-bg-opacity: 1;
   background-color: rgb(39 49 84 / var(--tw-bg-opacity));
+}
+
+.bg-white{
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
 .bg-gradient-to-t{
@@ -673,29 +756,46 @@ video {
   padding: 0.75rem;
 }
 
-.pr-5{
-  padding-right: 1.25rem;
+.pl-2{
+  padding-left: 0.5rem;
 }
 
 .pl-5{
   padding-left: 1.25rem;
 }
 
-.pl-2{
-  padding-left: 0.5rem;
+.text-\[10px\]{
+  font-size: 10px;
 }
 
 .text-\[24px\]{
   font-size: 24px;
 }
 
+.text-\[30px\]{
+  font-size: 30px;
+}
+
 .tracking-\[3px\]{
   letter-spacing: 3px;
+}
+
+.tracking-wide{
+  letter-spacing: 0.025em;
+}
+
+.text-\[\#F18805\]{
+  --tw-text-opacity: 1;
+  color: rgb(241 136 5 / var(--tw-text-opacity));
 }
 
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.opacity-10{
+  opacity: 0.1;
 }
 
 .shadow-inputInner{
@@ -728,6 +828,27 @@ a {
   font-optical-sizing: auto;
   font-weight: 250;
   font-style: normal;
+}
+
+#SelectionSlider {
+  transition: transform 0.5s ease;
+  /* Slower transition */
+}
+
+/* Add glow effect on hover for icons */
+
+#ExternalLogin ion-icon:hover {
+  filter: drop-shadow(0 0 5px rgba(241, 136, 5, 0.2));
+  /* Adjust glow effect as needed */
+}
+
+.hover\:pointer-events-auto:hover{
+  pointer-events: auto;
+}
+
+.hover\:text-white:hover{
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 .hover\:drop-shadow-LoginH:hover{
