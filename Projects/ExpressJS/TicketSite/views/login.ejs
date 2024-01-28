@@ -8,8 +8,12 @@
       <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body class="m-0 p-0">
-    <div id="main" class="w-screen h-screen flex flex-col justify-center items-center from-[#F18805] to-[#DE7254] bg-gradient-to-t">
-      <div id="LoginContainer" class="flex flex-row items-center relative bg-[#273154] w-[570px] h-[504px] drop-shadow-Login hover:drop-shadow-LoginH rounded-2xl">
+    <div id="main" class="w-screen h-screen grid grid-cols-3 from-[#F18805] to-[#DE7254] bg-gradient-to-t">
+        <div id="Logo" class="col-span-3 mt-2 flex flex-row">
+            <ion-icon name="accessibility-outline" class="pt-2 ml-4 text-3xl"></ion-icon>
+            <h1 class="koulen-regular ml-1 text-white opacity-80">TICKIT</h1>
+        </div>
+        <div id="LoginContainer" class="flex flex-row items-center relative col-start-2 bg-[#273154] w-[100vw/3] h-[504px] drop-shadow-Login hover:drop-shadow-LoginH rounded-2xl">
           <div id="LContainer" class="w-[10%] shrink grow">
           </div>
           <div id="Login" class="flex flex-col items-center self-start w-[80%] shrink grow">
